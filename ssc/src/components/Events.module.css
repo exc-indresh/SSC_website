@@ -1,0 +1,45 @@
+.about {
+	margin: 20px;
+	padding: 0;
+}
+.middle {
+	padding: 10% 20%;
+	align-items: center;
+}
+.heading {
+	font-weight: bolder;
+}
+.contain {
+	padding: 5% 0;
+}
+.container {
+	padding: 3rem;
+	display: flex;
+	flex-direction: row;
+	font-family: "Times New Roman", Times, serif;
+}
+.partner {
+	background-color: #ffe5e5;
+	padding: 5%;
+	min-height: 10%;
+	min-width: 70%;
+}
+.logo {
+	padding: 20%;
+}
+.para {
+	width: 60%;
+}
+.title {
+	padding: 8rem 3rem 0;
+	font-family: "Times New Roman", Times, serif;
+}
+.gallery {
+	padding: 1% 0 5%;
+}
+.middlediv {
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	font-weight: bolder;
+	padding-bottom: 4%;
+}
