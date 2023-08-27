@@ -13,12 +13,18 @@ import {
   Show,
   Stack,
   Text,
+
 } from "@chakra-ui/react";
 import React from "react";
-import { BsArrowRight, BsClock, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { BsClock, BsInstagram, BsLinkedin } from "react-icons/bs";
 import heros from "../assets/heros.jpg";
 import ssc from "../assets/ssc-logo.jpg";
+import homePic from "../assets/homePic.png";
+import { Container, Row, Col } from "react-bootstrap";
+import Type from "./Type"
+import {AiFillInstagram, AiFillTwitterSquare,} from "react-icons/ai";
 import "../App.css";
+import { MdFacebook } from "react-icons/md";
 
 const Home = () => {
   const aboutUs =
@@ -47,58 +53,75 @@ const Home = () => {
   ];
   return (
     <>
-      <Box
-        className="hero-section mb-5"
-        backgroundImage={heros}
-        color={"white"}
-        backgroundSize={"cover"}
-        backgroundPosition={"center"}
-        textAlign={{ sm: "center", lg: "right" }}
-      >
-        <Box
-          width={"100%"}
-          height={"100%"}
-          backgroundColor={"#0055a499"}
-          padding={70}
-          paddingLeft={{ lg: "40%" }}
-        >
-          <Heading
-            className="fade-in-bottom"
-            fontSize={{ lg: 60 }}
-            opacity={0}
-            style={{ animationDelay: "1s" }}
-          >
-            Empowering Societies
-            <br />
-            Through Services
-          </Heading>
-          <Text
-            fontSize={{ lg: "xl" }}
-            paddingY={10}
-            opacity={0}
-            className="fade-in-bottom"
-            style={{ animationDelay: "2s" }}
-          >
-            Join SSC and make a positive impact in your community. We're a group
-            of volunteers dedicated to uplifting through service and
-            collaboration. Together, we're creating a world where everyone
-            thrives.
-          </Text>
-          <Button
-            className="fade-in-left"
-            size={"md"}
-            backgroundColor="#FFD54F"
-            opacity={0}
-            _hover={{ backgroundColor: "#FFC107" }}
-            color="#0055A4"
-            fontWeight={"bold"}
-            rightIcon={<BsArrowRight />}
-            style={{ animationDelay: "3s" }}
-          >
-            Join Our Club
-          </Button>
-        </Box>
-      </Box>
+      <Container fluid className="home-section" id="home">
+        <Container className="home-content">
+
+          <Row>
+            <Col md={7} className="home-header">
+              <h1 className="heading">Plant Make a positive impact on your enviroment</h1>
+              <div style={{ textAlign: "left", height:'80px'}}> <Type /> </div>
+
+              <div className="home-btn" >
+                <a href="/" className="home-getStartBtn">Get Start</a>
+                <a href="/" className=" home-knowMoreBtn">Know More</a>
+              </div>
+
+
+              <div className="bottom-text-home-btn">Lorem ipsum dolor sit amet.</div>
+
+
+              <ul className="homePage-icons">
+                <li className="social-icons">
+                  <a
+                    href="/"
+                    style={{ color: "white" }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MdFacebook />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="/"
+                    style={{ color: "white" }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <AiFillTwitterSquare />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="/"
+                    style={{ color: "white"}}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <AiFillInstagram />
+                  </a>
+                </li>
+              </ul>
+
+
+            </Col>
+
+            <Col md={5} style={{ paddingBottom: 20 }}>
+              <img
+                src={homePic}
+                alt="LOGO"
+                className="img-fluid"
+                style={{ maxHeight: "400px" }}
+              />
+            </Col>
+          </Row>
+
+
+        </Container>
+      </Container>
+
+
+
       <Box
         className="about-us mb-5 p-3 mx-auto"
         id="about-us"
@@ -107,6 +130,9 @@ const Home = () => {
         <Show above="md">
           <Image src={ssc} float={"left"} width={"20vw"} marginY={"65px"} />
         </Show>
+
+
+
         <Box>
           <Heading fontSize={20} fontFamily={"Montserrat"}>
             ABOUT US
